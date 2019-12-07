@@ -15,11 +15,15 @@ steps:
     script: |
       echo Trying to exec git command
 
+      ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
+
       git checkout develop
       git pull origin develop
 
       git checkout master
       git pull origin master
+
+      ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
 
       echo git diff --name-only HEAD@{0} HEAD@{1}
       git diff --name-only HEAD@{0} HEAD@{2}
