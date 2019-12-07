@@ -16,6 +16,7 @@ steps:
       echo Trying to exec git command
       
       git checkout master
+      fit fetch
       git diff --name-only HEAD@{0} HEAD@{1}
       git log -3
 
