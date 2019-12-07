@@ -22,7 +22,7 @@ steps:
       git pull origin master
 
       echo git diff --name-only HEAD@{0} HEAD@{1}
-      git diff --name-only HEAD@{0} HEAD@{1}
+      git diff --name-only HEAD@{0} HEAD@{2}
       echo done
 
       echo git diff --name-only master..develop
@@ -31,4 +31,8 @@ steps:
 
       echo git rev-parse --verify HEAD
       git rev-parse --verify HEAD
+      echo done
+
+      echo git show-ref --head
+      git show-ref --head
       echo done
