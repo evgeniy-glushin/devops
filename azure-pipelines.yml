@@ -7,13 +7,28 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: CmdLine@2
   inputs:
     script: |
       echo Trying to exec git command
-      
+
       git checkout develop
+      git pull origin develop
+
+      git checkout master
+      git pull origin master
+
+      echo git diff --name-only HEAD@{0} HEAD@{1}
       git diff --name-only HEAD@{0} HEAD@{1}
+      echo done
+
+      echo git diff --name-only master..develop
+      git diff --name-only master..develop
+      echo done
+
+      echo git rev-parse --verify HEAD
+      git rev-parse --verify HEAD
+      echo done
