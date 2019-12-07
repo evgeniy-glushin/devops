@@ -15,10 +15,10 @@ steps:
     script: |
       echo Trying to exec git command
 
-      git fetch --all
+      git pull origin develop
 
       git checkout master
-      git fetch
+      git pull origin master
 
       echo git diff --name-only HEAD@{0} HEAD@{1}
       git diff --name-only HEAD@{0} HEAD@{1}
