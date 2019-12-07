@@ -25,6 +25,7 @@ steps:
       git checkout master
       git pull origin master
 
+      echo git checkout %sourceBranch%
       git checkout %sourceBranch%
       git pull origin %sourceBranch%
 
@@ -35,6 +36,8 @@ steps:
       echo git diff --name-only master..sourceBranch
       git diff --name-only master..%sourceBranch% > diff.txt
       echo done
+
+      echo git add .
 
       echo git commit -m "Compare changes with the target branch"
       git commit -m "Compare changes with the target branch"
