@@ -28,3 +28,7 @@ steps:
       echo git diff --name-only master..develop
       git diff --name-only master..develop
       echo done
+
+      echo git rev-parse --verify HEAD
+      git rev-parse --verify HEAD
+      echo done
