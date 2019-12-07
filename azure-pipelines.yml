@@ -18,6 +18,6 @@ steps:
       git checkout master
       git fetch
       git diff --name-only HEAD@{0} HEAD@{1}
-      git log -3
+      # git log -3
 
       echo Diff is done
