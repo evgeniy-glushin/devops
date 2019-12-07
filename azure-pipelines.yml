@@ -22,7 +22,7 @@ steps:
       git pull origin master
 
       echo git diff --name-only HEAD@{0} HEAD@{1}
-      git diff --name-only HEAD@{0} HEAD@{1}
+      git diff --name-only HEAD@{0} HEAD@{3}
       echo done
 
       echo git diff --name-only master..develop
