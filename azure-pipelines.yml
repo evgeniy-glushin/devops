@@ -17,3 +17,5 @@ steps:
       
       git checkout develop
       git diff --name-only HEAD@{0} HEAD@{1}
+
+      echo Diff is done
