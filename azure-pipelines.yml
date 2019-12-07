@@ -32,3 +32,7 @@ steps:
       echo git rev-parse --verify HEAD
       git rev-parse --verify HEAD
       echo done
+
+      echo git show-ref --head
+      git show-ref --head
+      echo done
