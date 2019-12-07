@@ -21,7 +21,7 @@ steps:
 
       echo starting diff...
 
-      git diff --name-only HEAD@{0} HEAD@{1}
+      git diff --name-only HEAD@{0} HEAD@{5}
       # git log -3
 
       echo Diff is done
