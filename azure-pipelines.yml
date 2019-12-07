@@ -19,7 +19,7 @@ steps:
       git fetch
       git pull
 
-      Diff starting diff
+      echo starting diff...
 
       git diff --name-only HEAD@{0} HEAD@{1}
       # git log -3
