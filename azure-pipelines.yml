@@ -18,9 +18,10 @@ steps:
     
       ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
 
-      SET sourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
+      SET originSourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
+      SET sourceBranch=%originSourceBranch:~7% 
 
-      ECHO SOURCE BRANCH IS %sourceBranch%
+      ECHO SOURCE BRANCH IS with removed origin %sourceBranch%
 
       git checkout master
       git pull origin master
