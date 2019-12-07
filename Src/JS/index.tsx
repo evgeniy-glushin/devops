@@ -22,6 +22,7 @@ import {orderBy} from 'lodash';
 import {BaseProps} from 'src/BaseProps';
 import Notification, {showNotification} from "./../Notification";
 
+
 interface IFinanceReportProps extends WithStyles<typeof styles>, BaseProps {
 }
 
