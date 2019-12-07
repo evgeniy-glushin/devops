@@ -15,4 +15,5 @@ steps:
     script: |
       echo Trying to exec git command
       
+      git checkout develop
       git status
