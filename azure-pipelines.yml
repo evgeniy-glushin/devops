@@ -17,26 +17,22 @@ steps:
 
       ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
 
-      git checkout develop
-      git pull origin develop
+      SET sourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
 
       git checkout master
       git pull origin master
 
-      ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
+      git checkout %sourceBranch%
+      git pull origin %sourceBranch%
 
       echo git diff --name-only HEAD@{0} HEAD@{1}
-      git diff --name-only HEAD@{0} HEAD@{2}
+      git diff --name-only HEAD@{0} HEAD@{1}
       echo done
 
-      echo git diff --name-only master..develop
-      git diff --name-only master..develop
+      echo git diff --name-only master..sourceBranch
+      git diff --name-only master..%sourceBranch% > diff.txt
       echo done
 
-      echo git rev-parse --verify HEAD
-      git rev-parse --verify HEAD
-      echo done
-
-      echo git show-ref --head
-      git show-ref --head
-      echo done
+      echo git commit -m "Compare changes with the target branch"
+      git commit -m "Compare changes with the target branch"
+      git push origin
