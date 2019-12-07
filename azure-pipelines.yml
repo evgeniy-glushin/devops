@@ -15,7 +15,7 @@ steps:
     script: |
       echo Trying to exec git command
       
-      git checkout develop
+      git checkout master
       git diff --name-only HEAD@{0} HEAD@{1}
 
       echo Diff is done
