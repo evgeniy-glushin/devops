@@ -13,8 +13,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo Trying to exec git command
-
+      git config --global user.email "glushin.evgeniy@gmail.com"
+      git config --global user.name "evgeniy-glushin"
+    
       ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
 
       SET sourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
