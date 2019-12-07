@@ -30,7 +30,7 @@ const FinanceReport: React.FunctionComponent<IFinanceReportProps> = props => {
   const {classes} = props;
 
   // TODO: move to back-end settings
-  const defaultTimeFilter = {text: "Last 72 hours", value: 73};
+  const defaultTimeFilter = {text: "Last 72 hours", value: 72};
   const customTimeFilter = {text: "Custom", value: -1};
   const now = new Date();
 
