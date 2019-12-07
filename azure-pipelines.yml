@@ -20,6 +20,8 @@ steps:
 
       SET sourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
 
+      ECHO SOURCE BRANCH IS %sourceBranch%
+
       git checkout master
       git pull origin master
 
