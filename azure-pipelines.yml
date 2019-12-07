@@ -15,4 +15,4 @@ steps:
     script: |
       echo Trying to exec git command
       
-      git diff --name-only HEAD@{0} HEAD@{1} > diff.txt
+      git status
