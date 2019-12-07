@@ -35,7 +35,7 @@ const FinanceReport: React.FunctionComponent<IFinanceReportProps> = props => {
   const now = new Date();
 
   const [timeFilters, setTimeFilters] = useState([customTimeFilter, defaultTimeFilter] as TimeFilter[]);
-  const [costCenters, setCostCenters] = useState([{id: 0, name: 'All', code: ''}] as CostCenter[]);
+  const [costCenters, setCostCenters] = useState([{id: 0, name: 'None', code: ''}] as CostCenter[]);
   const [state, setState] = useState(
     initState(new InitStatePayload(now, defaultTimeFilter))
   );
