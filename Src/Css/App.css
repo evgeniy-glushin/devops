@@ -1,0 +1,109 @@
+.container-fluid{
+     width: 100%;
+     padding-right: 45px;
+     padding-left: 45px;
+     margin-right: auto;
+     margin-left: auto;
+ }
+
+.container{
+    width: 100%;
+    max-width: 1240px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.h1, h1 {
+    font-size: 2rem;
+
+}
+
+.h2, h2 {
+    font-size: 1.75rem;
+}
+
+.h3, h3 {
+    font-size: 1.5rem;
+}
+
+.h4, h4 {
+    font-size: 1.25rem;
+}
+
+.h5, h5 {
+    font-size: 1rem;
+}
+
+.header, .legend {
+    position: relative;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+.date{
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 500;
+}
+
+.date--label{
+  margin-right: 10px;
+}
+
+.form-control{
+    margin: 8px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu a{
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 0 15px 0 0;
+    padding: 7px 10px;
+    border-radius: 4px;
+    transition: background-color .2s ease-in-out;
+}
+
+.menu a:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: background-color .2s ease-in-out;
+}
+
+.alert {
+    min-width: 150px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24) ;
+}
+
+.alert-error{
+    background-color: #e27c79;
+    border-color: #dd6864;
+    color: #9f2723;
+}
