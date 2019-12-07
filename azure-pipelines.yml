@@ -14,10 +14,12 @@ steps:
   inputs:
     script: |
       echo Trying to exec git command
-      
+
+      git checkout develop
+      git fetch
+
       git checkout master
       git fetch
-      git pull
 
       echo git diff --name-only HEAD@{0} HEAD@{1}
       git diff --name-only HEAD@{0} HEAD@{1}
