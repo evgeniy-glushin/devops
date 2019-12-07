@@ -15,7 +15,8 @@ steps:
     script: |
       git config --global user.email "glushin.evgeniy@gmail.com"
       git config --global user.name "evgeniy-glushin"
-    
+      git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+
       ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
 
       SET originSourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
