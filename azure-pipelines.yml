@@ -19,8 +19,12 @@ steps:
       git fetch
       git pull
 
-      echo starting diff...
+      echo git diff --name-only HEAD@{0} HEAD@{1}
 
       git diff --name-only HEAD@{0} HEAD@{1}
 
-      echo Diff is done
+      echo done
+
+      echo git diff --name-only master..develop
+      git diff --name-only master..develop
+      echo done
