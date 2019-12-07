@@ -15,6 +15,9 @@ steps:
     script: |
       echo Trying to exec git command
 
+      git checkout develop
+      git fetch
+
       git checkout master
       git fetch
 
