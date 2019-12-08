@@ -92,6 +92,9 @@ steps:
         }
       "@
 
+      git config --global user.email "glushin.evgeniy@gmail.com"
+      git config --global user.name "evgeniy-glushin"
+
       Add-Type -TypeDefinition $source
       [ArtifactsUtils]::Ping()
 
@@ -105,9 +108,7 @@ steps:
       ECHO BuildArtifacts is done
 
       git status
-      git config --global user.email "glushin.evgeniy@gmail.com"
-      git config --global user.name "evgeniy-glushin"
-
+     
       ECHO GitConfigDone
 
       echo git add ./
