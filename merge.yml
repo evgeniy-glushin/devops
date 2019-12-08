@@ -88,9 +88,9 @@ steps:
       "@
 
       git checkout master
-      git pull origin master
+      git pull
 
-      git status
+      ECHO Run BuildArtifacts...
 
       Add-Type -TypeDefinition $source
       [ArtifactsUtils]::Ping
