@@ -18,21 +18,76 @@ steps:
     targetType: 'inline'
     script: |
       $source=@"
-      public class BasicTest
-      {
-          public static int Add(int a, int b)
-          {
-              return (a + b);
-          }
+        public class ArtifactsUtils
+        {
+            public static void Ping() { System.Console.WriteLine("ArtifactsUtils is working"); }
+            public static void BuildArtifacts()
+            {
+                var root = System.Environment.CurrentDirectory;
 
-          public int Multiply(int a, int b)
-          {
-              return (a * b);
-          }
-      }
+                var diffFilePath = System.IO.Path.Combine(root, "diff.txt");
+                if(!System.IO.File.Exists(diffFilePath))
+                {
+                    System.Console.Error.WriteLine($"Coudn't find {diffFilePath} which is required for Artifacts.");
+                    return;
+                }
+
+                var diff = new System.IO.StreamReader(diffFilePath);
+
+                var artifacts = System.IO.Path.Combine(root, "Artifacts");
+
+                // clean up if exists
+                if (System.IO.Directory.Exists(artifacts))
+                    System.IO.Directory.Delete(artifacts, true);
+
+                System.IO.Directory.CreateDirectory(artifacts);
+
+                var changedFilePath = "";
+                while ((changedFilePath = diff.ReadLine()) != null)
+                {
+                    if (string.IsNullOrEmpty(changedFilePath) || changedFilePath == "diff.txt")
+                        continue;
+
+                    var source = System.IO.Path.Combine(root, changedFilePath);
+                    var distination = System.IO.Path.Combine(artifacts, changedFilePath);
+
+                    Copy(source, distination);
+                }
+
+                System.Console.WriteLine("Artifacts directory is ready!");
+            }
+
+            private static void Copy(string src, string dst)
+            {
+                // file added or changed
+                if (System.IO.File.Exists(src))
+                {
+                    CreateDirectory(dst);
+
+                    System.IO.File.Copy(src, dst);
+                }
+                else // file deleted
+                {
+                    var dstFi = new System.IO.FileInfo(dst);
+                    var deletedFileName = $"[DELETED]{dstFi.Name}";
+                    var deletedFilePath = System.IO.Path.Combine(dstFi.Directory.FullName, deletedFileName);
+
+                    CreateDirectory(deletedFilePath);
+
+                    System.IO.File.Create(deletedFilePath);
+                }
+            }
+
+            private static void CreateDirectory(string dst)
+            {
+                var dstFolder = new System.IO.FileInfo(dst).Directory.FullName;
+
+                if (!System.IO.Directory.Exists(dstFolder))
+                    System.IO.Directory.CreateDirectory(dstFolder);
+            }
+        }
       "@
 
       Add-Type -TypeDefinition $source
-      [BasicTest]::Add(4, 3)
-      $basicTestObject = New-Object BasicTest
-      $basicTestObject.Multiply(5, 2)
+      [ArtifactsUtils]::Ping
+      [ArtifactsUtils]::BuildArtifacts
