@@ -103,9 +103,8 @@ steps:
       git add ./
       git status
 
-      git commit -m "Create the Artifacts directory [skip ci]"
-
       git config --global user.email "glushin.evgeniy@gmail.com"
       git config --global user.name "evgeniy-glushin"
 
+      git commit -m "Create the Artifacts directory [skip ci]"
       git push origin
