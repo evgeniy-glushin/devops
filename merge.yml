@@ -91,6 +91,8 @@ steps:
       [ArtifactsUtils]::Ping
       [ArtifactsUtils]::BuildArtifacts
 
+      git status
+
    
 - task: CmdLine@2
   inputs:
