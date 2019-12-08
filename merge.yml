@@ -91,3 +91,5 @@ steps:
       Add-Type -TypeDefinition $source
       [ArtifactsUtils]::Ping
       [ArtifactsUtils]::BuildArtifacts
+
+      dir
