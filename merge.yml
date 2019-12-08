@@ -102,8 +102,6 @@ steps:
     script: |
       git status
 
-      git config --global --add url."git@github.com:".insteadOf "https://github.com/"
-
       git pull origin add-remove-change-3 2>&1
       git checkout add-remove-change-3 2>&1
      
