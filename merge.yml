@@ -10,7 +10,7 @@ pr:
 - none
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: PowerShell@2
@@ -104,6 +104,7 @@ steps:
 
     echo git add ./
     git add ./
+    git status
 
     echo git commit -m "Create the Artifacts directory"
     git commit -m "Create the Artifacts directory [skip ci]"
