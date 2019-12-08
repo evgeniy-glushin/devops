@@ -20,6 +20,8 @@ steps:
 
       ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
 
+      ECHO System.PullRequest.SourceBranch IS %SYSTEM_PULLREQUEST_SOURCEBRANCH%
+
       SET originSourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
       SET sourceBranch=%originSourceBranch:~7% 
 
