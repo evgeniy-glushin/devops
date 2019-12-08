@@ -87,28 +87,45 @@ steps:
         }
       "@
 
+      git checkout master
+      git pull origin master
+
+      git status
+
       Add-Type -TypeDefinition $source
       [ArtifactsUtils]::Ping
       [ArtifactsUtils]::BuildArtifacts
 
       git status
+      git config --global user.email "glushin.evgeniy@gmail.com"
+      git config --global user.name "evgeniy-glushin"
+
+      echo git add ./
+      git add ./
+      git status
+
+      echo git commit -m "Create the Artifacts directory"
+      git commit -m "Create the Artifacts directory [skip ci]"
+
+      echo git push origin
+      git push origin
 
    
-- task: CmdLine@2
-  inputs:
-   script: |
-    git config --global user.email "glushin.evgeniy@gmail.com"
-    git config --global user.name "evgeniy-glushin"
+# - task: CmdLine@2
+#   inputs:
+#    script: |
+#     git config --global user.email "glushin.evgeniy@gmail.com"
+#     git config --global user.name "evgeniy-glushin"
 
-    git checkout master
-    git pull origin master
+#     git checkout master
+#     git pull origin master
 
-    echo git add ./
-    git add ./
-    git status
+#     echo git add ./
+#     git add ./
+#     git status
 
-    echo git commit -m "Create the Artifacts directory"
-    git commit -m "Create the Artifacts directory [skip ci]"
+#     echo git commit -m "Create the Artifacts directory"
+#     git commit -m "Create the Artifacts directory [skip ci]"
 
-    echo git push origin
-    git push origin
+#     echo git push origin
+#     git push origin
