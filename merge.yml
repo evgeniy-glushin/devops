@@ -92,13 +92,14 @@ steps:
 
       Write-Host 'git gonfigured'
 
-      Write-Host 'pull is done'
-
       Add-Type -TypeDefinition $source
       [ArtifactsUtils]::BuildArtifacts()
 
       Write-Host 'BuildArtifacts is done'
 
+- task: CmdLine@2
+  inputs:
+    script: |
       git status
 
       git pull origin add-remove-change-3 2>&1
