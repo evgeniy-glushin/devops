@@ -36,11 +36,11 @@ steps:
       git diff --name-only HEAD@{0} HEAD@{1}
       echo done
 
-      echo git diff --name-only master..sourceBranch
+      echo git diff --name-only master..%sourceBranch%
       git diff --name-only master..%sourceBranch%
       echo done
 
-      echo git diff --name-only master..sourceBranch
+      echo git diff --name-only master..%sourceBranch%
       git diff --name-only master..%sourceBranch% > diff.txt
       echo done
 
