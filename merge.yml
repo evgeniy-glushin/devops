@@ -94,7 +94,6 @@ steps:
       git pull
 
       ECHO Run BuildArtifacts...
-
       
       [ArtifactsUtils]::BuildArtifacts
 
@@ -115,23 +114,3 @@ steps:
 
       echo git push origin
       git push origin
-
-   
-# - task: CmdLine@2
-#   inputs:
-#    script: |
-#     git config --global user.email "glushin.evgeniy@gmail.com"
-#     git config --global user.name "evgeniy-glushin"
-
-#     git checkout master
-#     git pull origin master
-
-#     echo git add ./
-#     git add ./
-#     git status
-
-#     echo git commit -m "Create the Artifacts directory"
-#     git commit -m "Create the Artifacts directory [skip ci]"
-
-#     echo git push origin
-#     git push origin
