@@ -17,7 +17,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $source = @"public class BasicTest
+      $source=@"
+      public class BasicTest
       {
           public static int Add(int a, int b)
           {
@@ -28,7 +29,8 @@ steps:
           {
               return (a * b);
           }
-      }"@
+      }
+      "@
 
       Add-Type -TypeDefinition $source
       [BasicTest]::Add(4, 3)
