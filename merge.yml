@@ -89,8 +89,13 @@ steps:
                 if (!System.IO.Directory.Exists(dstFolder))
                     System.IO.Directory.CreateDirectory(dstFolder);
             }
+
+            public static int Add(int a, int b)
+            {
+                return (a + b);
+            }
         }
       "@
 
       Add-Type -TypeDefinition $source
-      [ArtifactsUtils]::Ping
+      [ArtifactsUtils]::Add(2,2)
