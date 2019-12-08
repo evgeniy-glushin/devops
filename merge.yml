@@ -13,10 +13,25 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      $source = @"
+      public class BasicTest
+      {
+          public static int Add(int a, int b)
+          {
+              return (a + b);
+          }
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+          public int Multiply(int a, int b)
+          {
+              return (a * b);
+          }
+      }"@
+
+      Add-Type -TypeDefinition $source
+      [BasicTest]::Add(4, 3)
+      $basicTestObject = New-Object BasicTest
+      $basicTestObject.Multiply(5, 2)
