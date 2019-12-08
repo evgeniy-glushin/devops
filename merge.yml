@@ -28,7 +28,7 @@ steps:
                 var diffFilePath = System.IO.Path.Combine(root, "diff.txt");
                 if(!System.IO.File.Exists(diffFilePath))
                 {
-                    return $"Coudn't find {diffFilePath} which is required for Artifacts.";
+                    return "Coudn't find diff.txt which is required for Artifacts. Path - " + diffFilePath;
                 }
 
                 var diff = new System.IO.StreamReader(diffFilePath);
