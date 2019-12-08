@@ -96,6 +96,8 @@ steps:
       [ArtifactsUtils]::Ping
       [ArtifactsUtils]::BuildArtifacts
 
+      ECHO BuildArtifacts is done
+
       git status
       git config --global user.email "glushin.evgeniy@gmail.com"
       git config --global user.name "evgeniy-glushin"
