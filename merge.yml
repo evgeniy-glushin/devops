@@ -92,16 +92,18 @@ steps:
       [ArtifactsUtils]::Ping
       [ArtifactsUtils]::BuildArtifacts
 
-      git checkout master
-      git pull origin master
+   
+- task: CmdLine@2
+  inputs:
+   script: |
+    git checkout master
+    git pull origin master
 
-      echo git add ./
-      git add ./
+    echo git add ./
+    git add ./
 
-      echo git commit -m "Create the Artifacts directory"
-      git commit -m "Create the Artifacts directory [skip ci]"
+    echo git commit -m "Create the Artifacts directory"
+    git commit -m "Create the Artifacts directory [skip ci]"
 
-      echo git push origin
-      git push origin
-
-      dir
+    echo git push origin
+    git push origin
