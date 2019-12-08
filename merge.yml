@@ -21,15 +21,14 @@ steps:
         public class ArtifactsUtils
         {
             public static string Ping() { return "ArtifactsUtils is working"; }
-            public static void BuildArtifacts()
+            public static string void BuildArtifacts()
             {
                 var root = System.Environment.CurrentDirectory;
 
                 var diffFilePath = System.IO.Path.Combine(root, "diff.txt");
                 if(!System.IO.File.Exists(diffFilePath))
                 {
-                    System.Console.Error.WriteLine($"Coudn't find {diffFilePath} which is required for Artifacts.");
-                    return;
+                    return $"Coudn't find {diffFilePath} which is required for Artifacts.";
                 }
 
                 var diff = new System.IO.StreamReader(diffFilePath);
@@ -54,7 +53,7 @@ steps:
                     Copy(source, distination);
                 }
 
-                System.Console.WriteLine("Artifacts directory is ready!");
+                return "Artifacts directory is ready!";
             }
 
             private static void Copy(string src, string dst)
