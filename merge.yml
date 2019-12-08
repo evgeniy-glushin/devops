@@ -87,13 +87,15 @@ steps:
         }
       "@
 
+      Add-Type -TypeDefinition $source
+      [ArtifactsUtils]::Ping
+
       git checkout master
       git pull
 
       ECHO Run BuildArtifacts...
 
-      Add-Type -TypeDefinition $source
-      [ArtifactsUtils]::Ping
+      
       [ArtifactsUtils]::BuildArtifacts
 
       ECHO BuildArtifacts is done
