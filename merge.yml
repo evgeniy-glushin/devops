@@ -41,6 +41,8 @@ steps:
 
                 System.IO.Directory.CreateDirectory(artifacts);
 
+                System.Console.WriteLine("Artifacts directory has been created");
+
                 var changedFilePath = "";
                 while ((changedFilePath = diff.ReadLine()) != null)
                 {
@@ -64,6 +66,8 @@ steps:
                     CreateDirectory(dst);
 
                     System.IO.File.Copy(src, dst);
+
+                    System.Console.WriteLine(src + " has been coppied to " + dst);
                 }
                 else // file deleted
                 {
@@ -74,6 +78,7 @@ steps:
                     CreateDirectory(deletedFilePath);
 
                     System.IO.File.Create(deletedFilePath);
+                    System.Console.WriteLine(deletedFilePath + " has been created " + dst);
                 }
             }
 
