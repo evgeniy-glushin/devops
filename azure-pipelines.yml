@@ -18,14 +18,9 @@ steps:
       git config --global user.email "glushin.evgeniy@gmail.com"
       git config --global user.name "evgeniy-glushin"
 
-      ECHO SOURCE BRANCH IS %BUILD_SOURCEBRANCH%
+      SET sourceBranch=%SYSTEM_PULLREQUEST_SOURCEBRANCH% 
 
-      ECHO System.PullRequest.SourceBranch IS %SYSTEM_PULLREQUEST_SOURCEBRANCH%
-
-      SET originSourceBranch=origin/%BUILD_SOURCEBRANCH:refs/heads/=%
-      SET sourceBranch=%originSourceBranch:~7% 
-
-      ECHO SOURCE BRANCH IS with removed origin %sourceBranch%
+      ECHO SOURCE BRANCH IS %sourceBranch%
 
       git checkout master
       git pull origin master
