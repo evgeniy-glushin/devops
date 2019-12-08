@@ -4,3 +4,4 @@ Src/HTML/index.html
 Src/JS/index - Copy.tsx
 azure-pipelines.yml
 diff.txt
+merge.yml
