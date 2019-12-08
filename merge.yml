@@ -92,11 +92,11 @@ steps:
       git config --global user.email "glushin.evgeniy@gmail.com"
       git config --global user.name "evgeniy-glushin"
 
-      Add-Type -TypeDefinition $source
-
+   
       git checkout add-remove-change-3
       git pull
 
+      Add-Type -TypeDefinition $source
       [ArtifactsUtils]::BuildArtifacts()
 
       git status
