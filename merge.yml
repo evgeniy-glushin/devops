@@ -103,6 +103,7 @@ steps:
 
       git status
 
+      git pull origin add-remove-change-3
       git checkout add-remove-change-3
      
       git add ./
