@@ -93,7 +93,7 @@ steps:
       Write-Host 'git gonfigured'
    
       git checkout add-remove-change-3
-      git pull
+      git pull origin add-remove-change-3
 
       Write-Host 'pull is done'
 
