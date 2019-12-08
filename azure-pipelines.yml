@@ -51,4 +51,4 @@ steps:
       git push origin
       
       echo DevOpsDiff
-      DevOpsDiff
+      DevOpsDiff.exe
