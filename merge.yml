@@ -108,7 +108,7 @@ steps:
       git config --global user.email "glushin.evgeniy@gmail.com"
       git config --global user.name "evgeniy-glushin"
 
-      ECHO Git config is done
+      ECHO GitConfigDone
 
       echo git add ./
       git add ./
