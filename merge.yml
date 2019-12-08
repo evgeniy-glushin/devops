@@ -92,9 +92,12 @@ steps:
       git config --global user.email "glushin.evgeniy@gmail.com"
       git config --global user.name "evgeniy-glushin"
 
+      Write-Host 'git gonfigured'
    
       git checkout add-remove-change-3
       git pull
+
+      Write-Host 'pull is done'
 
       Add-Type -TypeDefinition $source
       [ArtifactsUtils]::BuildArtifacts()
