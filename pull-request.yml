@@ -37,7 +37,6 @@ steps:
       echo git add ./
       git add ./
 
-      echo git commit -m "Compare changes with the target branch"
       git commit -m "Compare changes with the target branch [skip ci]"
 
       echo git push origin
