@@ -8,6 +8,9 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
+- checkout: self
+  persistCredentials: true
+  clean: true
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
@@ -95,6 +98,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
+      git config --global user.email "glushin.evgeniy@gmail.com"
+      git config --global user.name "evgeniy-glushin"
+
       SET sourceBranch=%BUILD_SOURCEBRANCH:refs/heads/=% 
 
       ECHO SOURCE BRANCH IS %sourceBranch%
@@ -105,9 +111,6 @@ steps:
 
       git add ./
       git status
-
-      git config --global user.email "glushin.evgeniy@gmail.com"
-      git config --global user.name "evgeniy-glushin"
 
       git commit -m "Create the Artifacts directory [skip ci]"
       git push origin
