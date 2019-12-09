@@ -1,3 +1,9 @@
+Artifacts/Artifacts/Src/Css/[DELETED]App - 3.css
+Artifacts/Artifacts/Src/HTML/[DELETED]index.html
+Artifacts/Artifacts/Src/JS/[DELETED][DELETED]index - Copy.tsx
+Artifacts/Artifacts/[DELETED]DevOpsDiff.exe
+Artifacts/Artifacts/[DELETED]azure-pipelines.yml
+Artifacts/Artifacts/[DELETED]merge.yml
 Artifacts/DevOpsDiff.exe
 Artifacts/Src/Css/App - 3.css
 Artifacts/Src/HTML/index.html
