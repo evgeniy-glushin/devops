@@ -1,3 +1,0 @@
-Src/HTML/index.html
-diff.txt
-pull-request.yml
