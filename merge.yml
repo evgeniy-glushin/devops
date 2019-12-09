@@ -106,6 +106,8 @@ steps:
       git checkout %sourceBranch%
       git pull origin %sourceBranch%
 
+      del /f diff.txt
+
       git add ./
       git status
 
