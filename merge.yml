@@ -95,7 +95,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      SET sourceBranch=%BUILD_SOURCEBRANCH% 
+      SET sourceBranch=%BUILD_SOURCEBRANCH:refs/heads/=% 
 
       ECHO SOURCE BRANCH IS %sourceBranch%
 
