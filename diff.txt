@@ -1,34 +1,3 @@
-Artifacts/Artifacts/Artifacts/Artifacts/Artifacts/Src/Css/[DELETED][DELETED][DELETED][DELETED]App - 3.css
-Artifacts/Artifacts/Artifacts/Artifacts/Artifacts/Src/HTML/[DELETED][DELETED][DELETED][DELETED]index.html
-Artifacts/Artifacts/Artifacts/Artifacts/Artifacts/Src/JS/[DELETED][DELETED][DELETED][DELETED][DELETED]index - Copy.tsx
-Artifacts/Artifacts/Artifacts/Artifacts/Artifacts/[DELETED][DELETED][DELETED][DELETED]DevOpsDiff.exe
-Artifacts/Artifacts/Artifacts/Artifacts/Artifacts/[DELETED][DELETED][DELETED][DELETED]azure-pipelines.yml
-Artifacts/Artifacts/Artifacts/Artifacts/Artifacts/[DELETED][DELETED][DELETED][DELETED]merge.yml
-Artifacts/Artifacts/Artifacts/Artifacts/Src/Css/[DELETED][DELETED][DELETED]App - 3.css
-Artifacts/Artifacts/Artifacts/Artifacts/Src/HTML/[DELETED][DELETED][DELETED]index.html
-Artifacts/Artifacts/Artifacts/Artifacts/Src/JS/[DELETED][DELETED][DELETED][DELETED]index - Copy.tsx
-Artifacts/Artifacts/Artifacts/Artifacts/[DELETED][DELETED][DELETED]DevOpsDiff.exe
-Artifacts/Artifacts/Artifacts/Artifacts/[DELETED][DELETED][DELETED]azure-pipelines.yml
-Artifacts/Artifacts/Artifacts/Artifacts/[DELETED][DELETED][DELETED]merge.yml
-Artifacts/Artifacts/Artifacts/Src/Css/[DELETED][DELETED]App - 3.css
-Artifacts/Artifacts/Artifacts/Src/HTML/[DELETED][DELETED]index.html
-Artifacts/Artifacts/Artifacts/Src/JS/[DELETED][DELETED][DELETED]index - Copy.tsx
-Artifacts/Artifacts/Artifacts/[DELETED][DELETED]DevOpsDiff.exe
-Artifacts/Artifacts/Artifacts/[DELETED][DELETED]azure-pipelines.yml
-Artifacts/Artifacts/Artifacts/[DELETED][DELETED]merge.yml
-Artifacts/Artifacts/Src/Css/[DELETED]App - 3.css
-Artifacts/Artifacts/Src/HTML/[DELETED]index.html
-Artifacts/Artifacts/Src/JS/[DELETED][DELETED]index - Copy.tsx
-Artifacts/Artifacts/[DELETED]DevOpsDiff.exe
-Artifacts/Artifacts/[DELETED]azure-pipelines.yml
-Artifacts/Artifacts/[DELETED]merge.yml
-Artifacts/DevOpsDiff.exe
-Artifacts/Src/Css/App - 3.css
-Artifacts/Src/HTML/index.html
-Artifacts/Src/JS/[DELETED]index - Copy.tsx
-Artifacts/azure-pipelines.yml
-Artifacts/merge.yml
-DevOpsDiff.exe
 Src/Css/App - 3.css
 Src/HTML/index.html
 Src/JS/index - Copy.tsx
