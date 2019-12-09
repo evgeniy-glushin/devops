@@ -109,7 +109,7 @@ steps:
                 else // file deleted
                 {
                     var dstFi = new System.IO.FileInfo(dst);
-                    var deletedFileName = "[DELETED]" + "{dstFi.Name}";
+                    var deletedFileName = "[DELETED]" + dstFi.Name;
                     var deletedFilePath = System.IO.Path.Combine(dstFi.Directory.FullName, deletedFileName);
 
                     CreateDirectory(deletedFilePath);
