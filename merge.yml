@@ -1,8 +1,8 @@
 trigger:
-- none
+- master
 
 pr:
-- none
+- master
 
 pool:
   vmImage: 'windows-latest'
@@ -95,11 +95,14 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      git status
+      SET sourceBranch=%BUILD_SOURCEBRANCH% 
 
-      git pull origin add-remove-change-3 2>&1
-      git checkout add-remove-change-3 2>&1
-     
+      ECHO SOURCE BRANCH IS %sourceBranch%
+
+      echo git checkout %sourceBranch%
+      git checkout %sourceBranch%
+      git pull origin %sourceBranch%
+
       git add ./
       git status
 
