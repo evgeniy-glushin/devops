@@ -1,4 +1,0 @@
-Src/Css/App - Copy.css
-Src/HTML/index.html
-Src/JS/index - Added.tsx
-diff.txt
