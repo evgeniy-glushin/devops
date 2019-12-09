@@ -1,3 +1,0 @@
-Src/Css/App - Copy.css
-Src/HTML/index.html
-diff.txt
