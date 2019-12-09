@@ -1,7 +1,5 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+trigger:
+- none
 
 pr:
 - none
@@ -89,21 +87,24 @@ steps:
         }
       "@
 
-      git config --global user.email "glushin.evgeniy@gmail.com"
-      git config --global user.name "evgeniy-glushin"
-
       Add-Type -TypeDefinition $source
-
-      git checkout add-remove-change-3
-      git pull
-
       [ArtifactsUtils]::BuildArtifacts()
 
+      Write-Host 'BuildArtifacts is done'
+
+- task: CmdLine@2
+  inputs:
+    script: |
       git status
+
+      git pull origin add-remove-change-3 2>&1
+      git checkout add-remove-change-3 2>&1
      
       git add ./
       git status
 
-      git commit -m "Create the Artifacts directory [skip ci]"
+      git config --global user.email "glushin.evgeniy@gmail.com"
+      git config --global user.name "evgeniy-glushin"
 
+      git commit -m "Create the Artifacts directory [skip ci]"
       git push origin
