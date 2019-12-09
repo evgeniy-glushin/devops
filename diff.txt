@@ -4,3 +4,4 @@ Artifacts/Src/JS/[DELETED]index - Copy.tsx
 Src/Css/App - New.css
 Src/HTML/index.html
 Src/JS/index - Added.tsx
+diff.txt
