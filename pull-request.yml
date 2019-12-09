@@ -1,12 +1,12 @@
 
 trigger:
-- none
+- develop
 
 pool:
   vmImage: 'windows-latest'
 
 pr:
-- develop
+- none
 
 steps:
 - checkout: self
